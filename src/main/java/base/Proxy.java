@@ -32,7 +32,7 @@ public class Proxy implements Call{
     public Proxy(PhoneCall call){this.phoneCall = call;}
 
     public void showNumber(String number){
-        if (!number.startsWith("+7")||!number.startsWith("8")){
+        if (!number.startsWith("+7")&&!number.startsWith("8")){
             System.out.println("This is not Russia region, reccomend not to answer!"); //Или написать что подозрение на спам, подозрительный звонок и т.д.
         }
         phoneCall.showNumber(getNumber());
